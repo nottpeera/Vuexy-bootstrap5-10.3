@@ -53,8 +53,6 @@
       #layout-menu .menu-inner > .menu-item.only-dashboard { display: block; }
       /* Also show custom Form menu */
       #layout-menu .menu-inner > .menu-item.only-form { display: block; }
-      /* Also show custom Member menu */
-      #layout-menu .menu-inner > .menu-item.only-member { display: block; }
       /* Inside Dashboard, keep only first sub item (Analytics) */
       #layout-menu .menu-inner > .menu-item.only-dashboard .menu-sub > .menu-item { display: none; }
       #layout-menu .menu-inner > .menu-item.only-dashboard .menu-sub > .menu-item:first-child { display: block; }
@@ -120,14 +118,14 @@
           <!-- custom menu -->
           <ul class="menu-inner py-1">
             <!-- Console -->
-            <li class="menu-item only-dashboard">
+            <li class="menu-item only-dashboard active open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base ti tabler-smart-home"></i>
                 <div data-i18n="Dashboard">Dashboard</div>
                 <div class="badge text-bg-danger rounded-pill ms-auto">5</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="_dashboards.html" class="menu-link">
                     <div data-i18n="Shop">Shop</div>
                   </a>
@@ -152,21 +150,6 @@
                 <li class="menu-item">
                   <a href="_form-register.html" class="menu-link">
                     <div data-i18n="Register Form">Register Form</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <!-- Member -->
-            <li class="menu-item only-member active open">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon icon-base ti tabler-users"></i>
-                <div data-i18n="Member">Member</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item active">
-                  <a href="_member-home.html" class="menu-link">
-                    <div data-i18n="Member list">Member list</div>
                   </a>
                 </li>
               </ul>
@@ -641,10 +624,234 @@
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
-        <main class="container py-5">
-            
-        </main>
-        
+<main class="container py-5">
+      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+        <div>
+          <h1 class="section-title mb-2">แดชบอร์ดสรุปยอดขายรายวัน</h1>
+          <p class="text-secondary mb-0">
+            Mockup หน้ารายงานสรุปจำนวนการขายสินค้า แยกตามวันและประเภทสินค้า
+          </p>
+        </div>
+        <button class="btn btn-primary btn-lg shadow-sm">ส่งออกเป็น Excel</button>
+      </div>
+      <div class="row row-cols-1 row-cols-md-4 g-3 mb-4">
+        <div class="col">
+          <div class="card metric-card">
+            <div class="card-body">
+              <p class="text-uppercase text-secondary small mb-2">ยอดขายรวมสัปดาห์นี้</p>
+              <div class="d-flex align-items-baseline gap-3">
+                <span class="metric-value text-primary">3,780</span>
+                <span class="badge bg-label-success">+12.6%</span>
+              </div>
+              <small class="text-secondary">เทียบกับสัปดาห์ที่ผ่านมา</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card metric-card">
+            <div class="card-body">
+              <p class="text-uppercase text-secondary small mb-2">เฉลี่ยต่อวัน</p>
+              <div class="d-flex align-items-baseline gap-3">
+                <span class="metric-value text-success">540</span>
+                <span class="badge bg-label-primary">7 วัน</span>
+              </div>
+              <small class="text-secondary">รวมสินค้าทั้งหมด</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card metric-card">
+            <div class="card-body">
+              <p class="text-uppercase text-secondary small mb-2">สินค้ายอดนิยม</p>
+              <div class="d-flex align-items-baseline gap-3">
+                <span class="metric-value text-warning">Drip Coffee</span>
+              </div>
+              <small class="text-secondary">ยอดขาย 1,420 ชิ้น</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card metric-card">
+            <div class="card-body">
+              <p class="text-uppercase text-secondary small mb-2">จำนวนใบเสร็จ</p>
+              <div class="d-flex align-items-baseline gap-3">
+                <span class="metric-value text-info">865</span>
+                <span class="badge bg-label-info">+5.4%</span>
+              </div>
+              <small class="text-secondary">เฉลี่ย 123 ใบต่อวัน</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+          <div class="row g-3 align-items-end">
+            <div class="col-md-3">
+              <label for="periodStart" class="form-label">วันที่เริ่มต้น</label>
+              <input type="date" class="form-control" id="periodStart" value="2024-05-13" />
+            </div>
+            <div class="col-md-3">
+              <label for="periodEnd" class="form-label">วันที่สิ้นสุด</label>
+              <input type="date" class="form-control" id="periodEnd" value="2024-05-19" />
+            </div>
+            <div class="col-md-3">
+              <label for="channelSelect" class="form-label">ช่องทางการขาย</label>
+              <select class="form-select" id="channelSelect">
+                <option>ทั้งหมด</option>
+                <option>สาขา Central World</option>
+                <option>หน้าร้านสาขาสีลม</option>
+                <option>สั่งออนไลน์</option>
+              </select>
+            </div>
+            <div class="col-md-3 d-grid">
+              <button class="btn btn-dark btn-lg">อัปเดตรายงาน</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 shadow-sm">
+        <div class="card-header bg-transparent border-0 pb-0">
+          <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+            <div>
+              <h2 class="h4 mb-1">ตารางสรุปยอดขายตามวันและสินค้า</h2>
+              <p class="text-secondary mb-0">ตัวเลขเป็นจำนวนชิ้นสินค้าที่ขายได้ในแต่ละวัน</p>
+            </div>
+            <div class="d-flex flex-wrap gap-3">
+              <span class="text-secondary">
+                <span class="legend-dot bg-primary"></span>
+                กาแฟคั่วบด 250g
+              </span>
+              <span class="text-secondary">
+                <span class="legend-dot bg-success"></span>
+                กาแฟดริปพร้อมชง
+              </span>
+              <span class="text-secondary">
+                <span class="legend-dot bg-warning"></span>
+                ชาเขียวเย็น 500ml
+              </span>
+              <span class="text-secondary">
+                <span class="legend-dot bg-info"></span>
+                ครัวซองต์เนยสด
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle text-center">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="text-start ps-4">วัน</th>
+                  <th colspan="4">จำนวนขายแยกตามสินค้า (ชิ้น)</th>
+                  <th rowspan="2">รวมทั้งวัน</th>
+                </tr>
+                <tr>
+                  <th class="bg-primary-subtle">กาแฟคั่วบด 250g</th>
+                  <th class="bg-success-subtle">กาแฟดริปพร้อมชง</th>
+                  <th class="bg-warning-subtle">ชาเขียวเย็น 500ml</th>
+                  <th class="bg-info-subtle">ครัวซองต์เนยสด</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-start ps-4">จันทร์ 13 พ.ค.</th>
+                  <td>180</td>
+                  <td>210</td>
+                  <td>145</td>
+                  <td>92</td>
+                  <td class="fw-semibold">627</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start ps-4">อังคาร 14 พ.ค.</th>
+                  <td>165</td>
+                  <td>205</td>
+                  <td>152</td>
+                  <td>88</td>
+                  <td class="fw-semibold">610</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start ps-4">พุธ 15 พ.ค.</th>
+                  <td>172</td>
+                  <td>
+                    215
+                    <span class="badge bg-label-success ms-1">สูงสุด</span>
+                  </td>
+                  <td>160</td>
+                  <td>95</td>
+                  <td class="fw-semibold">642</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start ps-4">พฤหัส 16 พ.ค.</th>
+                  <td>155</td>
+                  <td>198</td>
+                  <td>148</td>
+                  <td>84</td>
+                  <td class="fw-semibold">585</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start ps-4">ศุกร์ 17 พ.ค.</th>
+                  <td>
+                    190
+                    <span class="badge bg-label-primary ms-1">โปรโมชัน</span>
+                  </td>
+                  <td>207</td>
+                  <td>172</td>
+                  <td>101</td>
+                  <td class="fw-semibold">670</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start ps-4">เสาร์ 18 พ.ค.</th>
+                  <td>210</td>
+                  <td>194</td>
+                  <td>188</td>
+                  <td>120</td>
+                  <td class="fw-semibold">712</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start ps-4">อาทิตย์ 19 พ.ค.</th>
+                  <td>175</td>
+                  <td>191</td>
+                  <td>180</td>
+                  <td>115</td>
+                  <td class="fw-semibold">661</td>
+                </tr>
+              </tbody>
+              <tfoot class="table-light">
+                <tr>
+                  <th class="text-start ps-4">รวมต่อสินค้า</th>
+                  <th>1,247</th>
+                  <th>1,420</th>
+                  <th>1,145</th>
+                  <th>695</th>
+                  <th class="fw-bold">4,507</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent border-0 pt-0">
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+            <div>
+              <h3 class="h6 mb-2">หมายเหตุ</h3>
+              <ul class="mb-0 text-secondary">
+                <li>ข้อมูลเป็นตัวเลขสมมุติเพื่อใช้ในการออกแบบหน้ารายงาน</li>
+                <li>สามารถเพิ่มคอลัมน์สินค้าใหม่ได้จากการตั้งค่า</li>
+              </ul>
+            </div>
+            <div class="text-md-end">
+              <p class="fw-semibold mb-1">สินค้าขายดีที่สุด: กาแฟดริปพร้อมชง (1,420 ชิ้น)</p>
+              <p class="text-secondary mb-0">วันหยุดสุดสัปดาห์มียอดขายสูงกว่าวันธรรมดาเฉลี่ย 9.4%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+          
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
 
@@ -673,73 +880,11 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
     <!-- Main JS -->
 
     <script src="../../assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script>
-      (function () {
-        const members = [
-          { id: 'M-0001', name: 'คุณ สุนทรา กาญจนา', gender: 'หญิง', age: '24-39', phone: '081-234-5678', email: 'sun@gmail.com', province: 'กรุงเทพฯ', date: '2025-10-03 10:12', verified: true },
-          { id: 'M-0002', name: 'คุณ ธนพงศ์ ชูเกียรติ', gender: 'ชาย', age: '24-39', phone: '089-555-9876', email: 'thanapong@example.com', province: 'ชลบุรี', date: '2025-10-03 09:58', verified: true },
-          { id: 'M-0003', name: 'คุณ ณิชารีย์ ไทยสงค์', gender: 'หญิง', age: '15-23', phone: '086-456-1122', email: 'nicha@example.com', province: 'ปทุมธานี', date: '2025-10-03 09:42', verified: false },
-          { id: 'M-0004', name: 'คุณ ปรางทิพย์ ศิริพร', gender: 'หญิง', age: '40-54', phone: '083-777-2221', email: 'prang@example.com', province: 'เชียงใหม่', date: '2025-10-03 09:20', verified: true },
-          { id: 'M-0005', name: 'คุณ จักรกฤษณ์ วัฒนะ', gender: 'ชาย', age: '24-39', phone: '082-666-5511', email: 'jak@example.com', province: 'นนทบุรี', date: '2025-10-03 08:35', verified: false },
-          { id: 'M-0006', name: 'คุณ กมลชนก สายใจ', gender: 'หญิง', age: '24-39', phone: '081-909-0001', email: 'kamol@example.com', province: 'นครปฐม', date: '2025-10-02 15:05', verified: true },
-          { id: 'M-0007', name: 'คุณ อุกฤษฎ์ จันทร์เพ็ญ', gender: 'ชาย', age: '40-54', phone: '085-222-7788', email: 'ukrit@example.com', province: 'ระยอง', date: '2025-10-02 11:14', verified: true },
-          { id: 'M-0008', name: 'คุณ วิภาดา รุ่งเรือง', gender: 'หญิง', age: '24-39', phone: '088-321-4567', email: 'wipada@example.com', province: 'ขอนแก่น', date: '2025-09-30 16:40', verified: false },
-          { id: 'M-0009', name: 'คุณ ธีรภัทร ปัญญา', gender: 'ชาย', age: '15-23', phone: '080-888-1234', email: 'teerapat@example.com', province: 'เชียงราย', date: '2025-09-29 13:22', verified: true },
-          { id: 'M-0010', name: 'คุณ จิรรัตน์ งามดี', gender: 'หญิง', age: '24-39', phone: '081-334-5566', email: 'jirarat@example.com', province: 'ภูเก็ต', date: '2025-09-27 10:47', verified: false }
-        ];
-
-        // KPIs
-        const total = members.length;
-        const latestDay = members.map(m => m.date.split(' ')[0]).sort().pop();
-        const todayCount = members.filter(m => m.date.startsWith(latestDay)).length;
-        const verified = members.filter(m => m.verified).length;
-        const el = id => document.getElementById(id);
-        if (el('kpiTotal')) el('kpiTotal').textContent = total.toLocaleString();
-        if (el('kpiToday')) el('kpiToday').textContent = todayCount.toLocaleString();
-        if (el('kpiVerified')) el('kpiVerified').textContent = verified.toLocaleString();
-
-        // Datatable
-        const tableEl = document.querySelector('.datatables-members');
-        if (tableEl && window.DataTable) {
-          const actions = () => `
-            <div class="dropdown">
-              <button class="btn btn-text-secondary btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                <i class="icon-base ti tabler-dots-vertical"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end">
-                <a class="dropdown-item" href="#"><i class="icon-base ti tabler-edit me-2"></i>แก้ไข</a>
-                <a class="dropdown-item text-danger" href="#"><i class="icon-base ti tabler-trash me-2"></i>ลบ</a>
-              </div>
-            </div>`;
-
-          new DataTable(tableEl, {
-            data: members,
-            columns: [
-              { data: 'id' },
-              { data: 'name' },
-              { data: 'gender' },
-              { data: 'age' },
-              { data: 'phone' },
-              { data: 'email' },
-              { data: 'province' },
-              { data: 'date' },
-              { data: 'verified', render: d => d ? '<span class="badge bg-label-success">ยืนยันแล้ว</span>' : '<span class="badge bg-label-secondary">รอยืนยัน</span>' },
-              { data: null, orderable: false, searchable: false, render: actions }
-            ],
-            order: [[7, 'desc']],
-            responsive: true,
-            pageLength: 10,
-            lengthMenu: [10, 25, 50]
-          });
-        }
-      })();
-    
   </body>
 </html>

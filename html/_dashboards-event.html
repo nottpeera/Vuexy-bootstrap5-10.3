@@ -627,18 +627,30 @@
 <main class="container py-5">
   <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
     <div>
-      <h1 class="section-title mb-2">แดชบอร์ดลงทะเบียนร่วมกิจกรรม</h1>
+      <h2 class="text-primary fw-semibold section-title mb-2">แดชบอร์ดลงทะเบียนร่วมกิจกรรม</h2>
       <p class="text-secondary mb-0">รวมสถิติการสมัครและการตอบคำถามรายวัน (6 คำถามต่อวัน)</p>
     </div>
     <button class="btn btn-primary btn-lg shadow-sm">ส่งออกเป็น Excel</button>
   </div>
 
   <!-- KPIs -->
-  <div class="row row-cols-1 row-cols-md-2 g-3 mb-4">
+  <div class="row row-cols-1 row-cols-md-3 g-3 mb-4">
     <div class="col">
       <div class="card metric-card h-100">
         <div class="card-body">
-          <p class="text-uppercase text-secondary small mb-2"><span class="avatar avatar-sm bg-label-primary me-2"><i class="icon-base ti tabler-user-plus"></i></span>จำนวนผู้ลงทะเบียนรวม</p>
+          <p class="text-uppercase text-secondary small mb-2"><span class="avatar avatar-sm me-2"><i class="icon-base ti tabler-calendar-stats"></i></span>ผู้ลงทะเบียน (วันล่าสุด)</p>
+          <div class="d-flex align-items-baseline gap-3">
+            <span class="metric-value text-warning fs-2 fw-bold">430</span>
+            <span class="badge bg-label-warning">ศุกร์ 3 ต.ค. 2025</span>
+          </div>
+          <small class="text-secondary">ข้อมูลเฉพาะวันล่าสุดเท่านั้น</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card metric-card h-100">
+        <div class="card-body">
+          <p class="text-uppercase text-secondary small mb-2"><span class="avatar avatar-sm me-2"><i class="icon-base ti tabler-user-plus"></i></span>จำนวนผู้ลงทะเบียนรวม</p>
           <div class="d-flex align-items-baseline gap-3">
             <span class="metric-value text-primary fs-2 fw-bold">2,845</span>
             <span class="badge bg-label-success">สัปดาห์นี้</span>
@@ -650,10 +662,10 @@
     <div class="col">
       <div class="card metric-card h-100">
         <div class="card-body">
-          <p class="text-uppercase text-secondary small mb-2"><span class="avatar avatar-sm bg-label-info me-2"><i class="icon-base ti tabler-message-circle"></i></span>จำนวนการตอบคำถาม (รวม 6 ข้อ)</p>
+          <p class="text-uppercase text-secondary small mb-2"><span class="avatar avatar-sm me-2"><i class="icon-base ti tabler-message-circle"></i></span>จำนวนการตอบคำถาม (รวม 6 ข้อ)</p>
           <div class="d-flex align-items-baseline gap-3">
             <span class="metric-value text-success fs-2 fw-bold">11,892</span>
-            <span class="badge bg-label-primary">รวม 8 วัน</span>
+            <span class="badge bg-label-success">รวม 8 วัน</span>
           </div>
           <small class="text-secondary">รวมคำตอบทุกข้อจากผู้เข้าร่วมทั้งหมด</small>
         </div>
@@ -687,53 +699,42 @@
                   <th>Q4</th>
                   <th>Q5</th>
                   <th>Q6</th>
-                  <th>รวมคำตอบ</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row" class="text-start ps-4">จันทร์</th>
-                  <td>380</td><td>340</td><td>335</td><td>332</td><td>328</td><td>321</td><td>318</td><td>312</td><td class="fw-semibold">1,946</td>
+                  <th scope="row" class="text-start ps-4">ศุกร์ 26 ก.ย. 2025</th>
+                  <td>420</td><td>375</td><td>372</td><td>369</td><td>362</td><td>358</td><td>352</td><td>346</td>
                 </tr>
                 <tr>
-                  <th scope="row" class="text-start ps-4">อังคาร</th>
-                  <td>392</td><td>350</td><td>347</td><td>343</td><td>339</td><td>333</td><td>329</td><td>324</td><td class="fw-semibold">2,015</td>
+                  <th scope="row" class="text-start ps-4">เสาร์ 27 ก.ย. 2025</th>
+                  <td>455</td><td>404</td><td>400</td><td>396</td><td>392</td><td>387</td><td>382</td><td>377</td>
                 </tr>
                 <tr>
-                  <th scope="row" class="text-start ps-4">พุธ</th>
-                  <td>405</td><td>363</td><td>360</td><td>356</td><td>351</td><td>346</td><td>341</td><td>336</td><td class="fw-semibold">2,090</td>
+                  <th scope="row" class="text-start ps-4">อาทิตย์ 28 ก.ย. 2025</th>
+                  <td>383</td><td>347</td><td>344</td><td>340</td><td>335</td><td>330</td><td>326</td><td>321</td>
                 </tr>
                 <tr>
-                  <th scope="row" class="text-start ps-4">พฤหัสบดี</th>
-                  <td>410</td><td>366</td><td>362</td><td>359</td><td>352</td><td>349</td><td>344</td><td>338</td><td class="fw-semibold">2,104</td>
+                  <th scope="row" class="text-start ps-4">จันทร์ 29 ก.ย. 2025</th>
+                  <td>380</td><td>340</td><td>335</td><td>332</td><td>328</td><td>321</td><td>318</td><td>312</td>
                 </tr>
                 <tr>
-                  <th scope="row" class="text-start ps-4">ศุกร์</th>
-                  <td>420</td><td>375</td><td>372</td><td>369</td><td>362</td><td>358</td><td>352</td><td>346</td><td class="fw-semibold">2,159</td>
+                  <th scope="row" class="text-start ps-4">อังคาร 30 ก.ย. 2025</th>
+                  <td>392</td><td>350</td><td>347</td><td>343</td><td>339</td><td>333</td><td>329</td><td>324</td>
                 </tr>
                 <tr>
-                  <th scope="row" class="text-start ps-4">เสาร์</th>
-                  <td>455</td><td>404</td><td>400</td><td>396</td><td>392</td><td>387</td><td>382</td><td>377</td><td class="fw-semibold">2,334</td>
+                  <th scope="row" class="text-start ps-4">พุธ 1 ต.ค. 2025</th>
+                  <td>405</td><td>363</td><td>360</td><td>356</td><td>351</td><td>346</td><td>341</td><td>336</td>
                 </tr>
                 <tr>
-                  <th scope="row" class="text-start ps-4">อาทิตย์</th>
-                  <td>383</td><td>347</td><td>344</td><td>340</td><td>335</td><td>330</td><td>326</td><td>321</td><td class="fw-semibold">1,996</td>
+                  <th scope="row" class="text-start ps-4">พฤหัสบดี 2 ต.ค. 2025</th>
+                  <td>410</td><td>366</td><td>362</td><td>359</td><td>352</td><td>349</td><td>344</td><td>338</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start ps-4">ศุกร์ 3 ต.ค. 2025</th>
+                  <td>430</td><td>384</td><td>380</td><td>375</td><td>368</td><td>360</td><td>355</td><td>350</td>
                 </tr>
               </tbody>
-              <tfoot class="table-light">
-                <tr>
-                  <th class="text-start ps-4">รวม</th>
-                  <th>2,845</th>
-                  <th>2,545</th>
-                  <th>2,420</th>
-                  <th>2,395</th>
-                  <th>2,359</th>
-                  <th>2,324</th>
-                  <th>2,292</th>
-                  <th>2,254</th>
-                  <th class="fw-bold">11,892</th>
-                </tr>
-              </tfoot>
             </table>
           </div>
         </div>
@@ -742,32 +743,31 @@
     <div class="col-12 col-lg-4">
       <div class="card border-0 shadow-sm h-100">
         <div class="card-header bg-transparent border-0 pb-0">
-          <h2 class="h5 mb-1">ผู้ลงทะเบียน 5 อันดับล่าสุด</h2>
-          <p class="text-secondary mb-0">อัปเดตแบบเรียลไทม์</p>
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <div>
+              <h2 class="h5 mb-1">ผู้ลงทะเบียนล่าสุด</h2>
+              <p class="text-secondary mb-0">อัปเดตแบบเรียลไทม์</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <label for="latestDaySelect" class="small text-secondary mb-0">เลือกวัน</label>
+              <select id="latestDaySelect" class="form-select form-select-sm">
+                <option value="2025-09-26">ศุกร์ 26 ก.ย. 2025</option>
+                <option value="2025-09-27">เสาร์ 27 ก.ย. 2025</option>
+                <option value="2025-09-28">อาทิตย์ 28 ก.ย. 2025</option>
+                <option value="2025-09-29">จันทร์ 29 ก.ย. 2025</option>
+                <option value="2025-09-30">อังคาร 30 ก.ย. 2025</option>
+                <option value="2025-10-01">พุธ 1 ต.ค. 2025</option>
+                <option value="2025-10-02">พฤหัสบดี 2 ต.ค. 2025</option>
+                <option value="2025-10-03" selected>ศุกร์ 3 ต.ค. 2025</option>
+              </select>
+            </div>
+          </div>
         </div>
         <div class="card-body">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span class="d-flex align-items-center"><i class="icon-base ti tabler-user-heart text-danger me-2"></i><span class="badge bg-label-primary me-2">#2845</span>คุณ สุนทรา ก.</span>
-              <small class="text-secondary">10 นาทีที่แล้ว</small>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span class="d-flex align-items-center"><i class="icon-base ti tabler-user-heart text-danger me-2"></i><span class="badge bg-label-primary me-2">#2844</span>คุณ ธนพงศ์ ช.</span>
-              <small class="text-secondary">25 นาทีที่แล้ว</small>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span class="d-flex align-items-center"><i class="icon-base ti tabler-user-heart text-danger me-2"></i><span class="badge bg-label-primary me-2">#2843</span>คุณ ณิชารีย์ ท.</span>
-              <small class="text-secondary">38 นาทีที่แล้ว</small>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span class="d-flex align-items-center"><i class="icon-base ti tabler-user-heart text-danger me-2"></i><span class="badge bg-label-primary me-2">#2842</span>คุณ ปรางทิพย์ ศ.</span>
-              <small class="text-secondary">1 ชม. ที่แล้ว</small>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span class="d-flex align-items-center"><i class="icon-base ti tabler-user-heart text-danger me-2"></i><span class="badge bg-label-primary me-2">#2841</span>คุณ จักรกฤษณ์ ว.</span>
-              <small class="text-secondary">1 ชม. 20 นาทีที่แล้ว</small>
-            </li>
-          </ul>
+          <ul id="latestList" class="list-group list-group-flush"></ul>
+        </div>
+        <div class="card-footer bg-transparent border-0 pt-0">
+          <button class="btn btn-outline-primary w-100">View member</button>
         </div>
       </div>
     </div>
@@ -813,5 +813,92 @@
     <script src="../../assets/js/main.js"></script>
 
     <!-- Page JS -->
+    <script>
+      (function () {
+        const data = {
+          '2025-09-26': [
+            { id: '#S-1021', name: 'คุณ วริศ ข.', time: '12 นาทีที่แล้ว' },
+            { id: '#S-1020', name: 'คุณ พิชญา พ.', time: '35 นาทีที่แล้ว' },
+            { id: '#S-1019', name: 'คุณ ณัฐพล ด.', time: '45 นาทีที่แล้ว' },
+            { id: '#S-1018', name: 'คุณ อรอุมา ช.', time: '1 ชม. ที่แล้ว' },
+            { id: '#S-1017', name: 'คุณ ชุติมา ม.', time: '1 ชม. 20 นาทีที่แล้ว' }
+          ],
+          '2025-09-27': [
+            { id: '#S-1105', name: 'คุณ พงศ์เทพ ม.', time: '8 นาทีที่แล้ว' },
+            { id: '#S-1104', name: 'คุณ ธิดารัตน์ บ.', time: '22 นาทีที่แล้ว' },
+            { id: '#S-1103', name: 'คุณ ภูริภัทร์ ศ.', time: '40 นาทีที่แล้ว' },
+            { id: '#S-1102', name: 'คุณ สุธีรา ว.', time: '58 นาทีที่แล้ว' },
+            { id: '#S-1101', name: 'คุณ นวลจันทร์ ฉ.', time: '1 ชม. 10 นาทีที่แล้ว' }
+          ],
+          '2025-09-28': [
+            { id: '#S-1203', name: 'คุณ ธนภพ ก.', time: '5 นาทีที่แล้ว' },
+            { id: '#S-1202', name: 'คุณ ศุภกานต์ พ.', time: '17 นาทีที่แล้ว' },
+            { id: '#S-1201', name: 'คุณ วิภาดา ร.', time: '31 นาทีที่แล้ว' },
+            { id: '#S-1200', name: 'คุณ รชต บ.', time: '46 นาทีที่แล้ว' },
+            { id: '#S-1199', name: 'คุณ นภัสสร ท.', time: '1 ชม. 5 นาทีที่แล้ว' }
+          ],
+          '2025-09-29': [
+            { id: '#S-1305', name: 'คุณ กมลชนก ส.', time: '9 นาทีที่แล้ว' },
+            { id: '#S-1304', name: 'คุณ อุกฤษฎ์ จ.', time: '24 นาทีที่แล้ว' },
+            { id: '#S-1303', name: 'คุณ พิมพ์ชนก ง.', time: '37 นาทีที่แล้ว' },
+            { id: '#S-1302', name: 'คุณ สุรเดช ณ.', time: '48 นาทีที่แล้ว' },
+            { id: '#S-1301', name: 'คุณ กมลวรรณ ศ.', time: '1 ชม. ที่แล้ว' }
+          ],
+          '2025-09-30': [
+            { id: '#S-1402', name: 'คุณ สุกานดา ค.', time: '6 นาทีที่แล้ว' },
+            { id: '#S-1401', name: 'คุณ ธนกร ธ.', time: '18 นาทีที่แล้ว' },
+            { id: '#S-1400', name: 'คุณ วรรษมน ค.', time: '29 นาทีที่แล้ว' },
+            { id: '#S-1399', name: 'คุณ พีรพัฒน์ ฟ.', time: '52 นาทีที่แล้ว' },
+            { id: '#S-1398', name: 'คุณ ฐิติมา อ.', time: '1 ชม. 8 นาทีที่แล้ว' }
+          ],
+          '2025-10-01': [
+            { id: '#S-1503', name: 'คุณ ฐาปนีย์ ว.', time: '11 นาทีที่แล้ว' },
+            { id: '#S-1502', name: 'คุณ ภิญญดา จ.', time: '27 นาทีที่แล้ว' },
+            { id: '#S-1501', name: 'คุณ ปาริฉัตร ฮ.', time: '44 นาทีที่แล้ว' },
+            { id: '#S-1500', name: 'คุณ ธีรภัทร ป.', time: '1 ชม. 2 นาทีที่แล้ว' },
+            { id: '#S-1499', name: 'คุณ จิรรัตน์ ง.', time: '1 ชม. 18 นาทีที่แล้ว' }
+          ],
+          '2025-10-02': [
+            { id: '#S-1604', name: 'คุณ ดนัย พ.', time: '7 นาทีที่แล้ว' },
+            { id: '#S-1603', name: 'คุณ อรอนงค์ ร.', time: '19 นาทีที่แล้ว' },
+            { id: '#S-1602', name: 'คุณ จักริน ล.', time: '36 นาทีที่แล้ว' },
+            { id: '#S-1601', name: 'คุณ จุฑามาศ ภ.', time: '55 นาทีที่แล้ว' },
+            { id: '#S-1600', name: 'คุณ วีรพล ก.', time: '1 ชม. 12 นาทีที่แล้ว' }
+          ],
+          '2025-10-03': [
+            { id: '#S-1705', name: 'คุณ สุนทรา ก.', time: '10 นาทีที่แล้ว' },
+            { id: '#S-1704', name: 'คุณ ธนพงศ์ ช.', time: '25 นาทีที่แล้ว' },
+            { id: '#S-1703', name: 'คุณ ณิชารีย์ ท.', time: '38 นาทีที่แล้ว' },
+            { id: '#S-1702', name: 'คุณ ปรางทิพย์ ศ.', time: '1 ชม. ที่แล้ว' },
+            { id: '#S-1705', name: 'คุณ สุนทรา ก.', time: '10 นาทีที่แล้ว' },
+            { id: '#S-1704', name: 'คุณ ธนพงศ์ ช.', time: '25 นาทีที่แล้ว' },
+            { id: '#S-1703', name: 'คุณ ณิชารีย์ ท.', time: '38 นาทีที่แล้ว' },
+            { id: '#S-1702', name: 'คุณ ปรางทิพย์ ศ.', time: '1 ชม. ที่แล้ว' },
+            { id: '#S-1701', name: 'คุณ จักรกฤษณ์ ว.', time: '1 ชม. 20 นาทีที่แล้ว' }
+          ]
+        };
+
+        const select = document.getElementById('latestDaySelect');
+        const list = document.getElementById('latestList');
+
+        function render(day) {
+          const arr = data[day] || [];
+          list.innerHTML = arr
+            .map(
+              (item) => `
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span class="d-flex align-items-center"><span class="badge bg-label-primary me-2">${item.id}</span>${item.name}</span>
+              <small class="text-secondary">${item.time}</small>
+            </li>`
+            )
+            .join('');
+        }
+
+        if (select && list) {
+          render(select.value);
+          select.addEventListener('change', () => render(select.value));
+        }
+      })();
+    </script>
   </body>
 </html>
